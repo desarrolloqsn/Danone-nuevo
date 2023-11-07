@@ -19,6 +19,7 @@ import Error404 from './contenedores/404/index.jsx';
 import { loginSuccess } from './redux/actions';
 
 
+
 // function PrivateRoute({ element, ...rest }) {
 //   const user = useSelector((state) => state.auth.user);
 
