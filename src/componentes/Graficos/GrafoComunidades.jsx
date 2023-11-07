@@ -44,7 +44,6 @@ const handleFiltroFechaChange = (valor) => {
     </Select> 
     
 
-
     <div className='grafo-video' >
   
     <Tooltip title="Click para ver el grafo">
