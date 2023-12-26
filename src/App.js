@@ -20,16 +20,6 @@ import { loginSuccess } from './redux/actions';
 
 
 
-// function PrivateRoute({ element, ...rest }) {
-//   const user = useSelector((state) => state.auth.user);
-
-//   return user ? (
-//     <Route {...rest} element={element} />
-//   ) : (
-//     <Navigate to="/" replace />
-//   );
-// }
-
 
 
 const theme = {
@@ -190,16 +180,7 @@ function App() {
   //   // Agrega más pasos de explicación para cada opción de gráfico según sea necesario...
   
   //   {
-  //     id: 'opcionGrafos',
-  //     options: [
-  //       { value: 'palabrasFrecuentes', label: 'Palabras más Frecuentes', trigger: 'explicacionPalabrasFrecuentes' },
-  //       { value: 'hashtagsFrecuentes', label: 'Hashtags más Frecuentes', trigger: 'explicacionHashtagsFrecuentes' },
-  //       { value: 'tendencias', label: 'Tendencias en las Conversaciones', trigger: 'explicacionTendencias' },
-  //       { value: 'atributosPoliticos', label: 'Atributos de Políticos', trigger: 'explicacionAtributosPoliticos' },
-  //       { value: 'interaccionInfluencia', label: 'Interacción e Influencia en las Conversaciones', trigger: 'explicacionInteraccionInfluencia' },
-  //       { value: 'comunidadesRedes', label: 'Comunidades en Redes Sociales', trigger: 'explicacionComunidadesRedes' },
-  //     ],
-  //   },
+  // 
   //   {
   //     id: 'explicacionPalabrasFrecuentes',
   //     message: 'Aquí está la explicación sobre las palabras más frecuentes en los grafos.',
@@ -214,13 +195,7 @@ function App() {
   //     id: 'explicacionTendencias',
   //     message: 'Aquí está la explicación sobre las tendencias en las conversaciones de los grafos.',
   //     end: true,
-  //   },
-  //   {
-  //     id: 'explicacionAtributosPoliticos',
-  //     message: 'Aquí está la explicación sobre los atributos de los políticos en los grafos.',
-  //     end: true,
-  //   },
-  //   {
+  //  
   //     id: 'explicacionInteraccionInfluencia',
   //     message: 'Aquí está la explicación sobre la interacción e influencia en las conversaciones de los grafos.',
   //     end: true,
@@ -238,7 +213,7 @@ function App() {
     const storedPassword = localStorage.getItem('password');
   
    // Si se encuentran almacenados, realizar el inicio de sesión automáticamente
-   if (storedUsername === "analistas" ||storedPassword === "qsnlanus" && storedPassword === "qsn123" || storedPassword === "qsnlanus2023") {
+   if (storedUsername === "analistas" ||storedPassword === "qsnvzla" && storedPassword === "qsn123" || storedPassword === "qsnvzla2023") {
     const user = {
       username: storedUsername,
       roles: ['user'],
@@ -262,7 +237,7 @@ function App() {
         <PrivateRoute path="/dashboard/*" element={<DashboardContainer />} />
     </Routes> */}
     
-  <Routes> 
+    <Routes> 
 
         <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <Login />} />
         {user && (
@@ -307,15 +282,15 @@ function DashboardContainer() {
          <Route path="/modificarcliente" element={<ModificarCliente />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/series" element={<Series />} />
-        <Route path="/Atributos de Personalidad" element={<DashModelo />} />
-        <Route path="/Atributos de Politicos" element={<DashModelo />} />
+        <Route path="/Atributos" element={<DashModelo />} />
+        <Route path="/Clima social" element={<DashModelo />} />
         <Route path="/Continuidad y cambio" element={<DashModelo />} />
         <Route path="/Emociones Básicas (Plutchik)" element={<DashModelo />} />
         <Route path="/Preocupaciones" element={<DashModelo />} />
-        <Route path="/Preocupaciones - Ven" element={<DashModelo />} />
+        {/* <Route path="/Preocupaciones - Ven" element={<DashModelo />} /> */}
         <Route path="/Red motivacional del voto" element={<DashModelo />} />
         <Route path="/Sentimientos" element={<DashModelo />} />
-        <Route path="/Voto Emocional y Racional" element={<DashModelo />} />
+        {/* <Route path="/Voto Emocional y Racional" element={<DashModelo />} /> */}
         
       </Routes>
      
