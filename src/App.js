@@ -204,7 +204,7 @@ function App() {
   //     id: 'explicacionComunidadesRedes',
   //     message: 'Aquí está la explicación sobre las comunidades en redes sociales en los grafos.',
   //     end: true,
-  //   },
+  //  
   // ];
 
   useEffect(() => {
